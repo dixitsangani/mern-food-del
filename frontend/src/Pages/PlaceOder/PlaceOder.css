@@ -1,0 +1,40 @@
+.place-order{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 100px ;
+}
+
+.place-oder-left{
+    width: 100%;
+    max-width: max(30%,500px);
+}
+
+.place-oder-left .tital{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.place-oder-left input{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #c5c5c5;
+    outline-color: tomato;
+}
+
+.place-oder-left .multi-fields{
+    display: flex;
+    gap: 10px;
+}
+
+.place-oder-right{
+    width: 100%;
+    max-width: max(40%,500px);
+}
+.proceed-btn{
+    margin-top: 10px;
+}
