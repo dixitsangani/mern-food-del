@@ -4,7 +4,7 @@ const orderctl = require("../../../Controllers/API/Food_List/Order_ctl")
 const authMiddleWare = require("../../../Middlewere/auth");
 
 
-// routes.post("/placeorder",authMiddleWare,orderctl.placeOrder)
+routes.post("/placeorder",authMiddleWare,orderctl.placeOrder)
 
 
 routes.post('/userorder',authMiddleWare, orderctl.userOrder);

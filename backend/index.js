@@ -26,10 +26,7 @@ mongoose.connect('mongodb+srv://dixitsangani303:1F0sB0f3WAAAWDgE@cluster0.envakk
         console.log(err)
     })
 
-var Publishable_Key = 'pk_test_51PnC66IDr67GOUJQrkcxErwlEzTk0EkDVCFsulq9pmPotiQmslSr8z4y7B3BWtp0XoVwuscDESAGWzg7HLlkhoYd00amMU2e5h'
-var Secret_Key = 'sk_test_51PnC66IDr67GOUJQiQhv7bZ9SlgjYjgGUsh1PAzAfWLMw7kQVWhtaY8HORMeYpBnzpUzxIxRnzL1LxlZYqCFeHvG00rcGBwf5A'
-const stripe = require('stripe')("sk_test_51PnC66IDr67GOUJQiQhv7bZ9SlgjYjgGUsh1PAzAfWLMw7kQVWhtaY8HORMeYpBnzpUzxIxRnzL1LxlZYqCFeHvG00rcGBwf5A")
-// Routes
+
 app.use("/admin", require("./Routes/API/Food_List/Food_List"));
 
 app.use("/user", require('./Routes/API/Food_List/User'));

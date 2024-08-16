@@ -38,34 +38,52 @@ export default function PlaceOder() {
       }
     })
     console.log(placeOrder)
+    alert("Order placed successfully 😋🥘🍴\n Thank You for Order😊");
+
+    setData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      street: "",
+      city: "",
+      state: "",
+      zipcode: "",
+      country: "",
+      phone: ""
+    })
 
     let orderData = {
       address: data,
       items: orderItems,
       amount: getTotalCartAmount() + 2,
     }
+
     let response = await axios.post(url + "/order/placeorder", orderData, { headers: { token } });
+
 
     if (response.data.success) {
       const { session_url } = response.data;
       window.location.replace(session_url)
+
+
     }
-    else{
+    else {
       alert("erorr")
+
     }
 
   }
 
-  const navigate =useNavigate();
+  const navigate = useNavigate();
 
-  useEffect(()=>{
+  useEffect(() => {
     if (!token) {
       navigate("/cart");
     }
-    else if(getTotalCartAmount()===0){
-        navigate("/cart");
+    else if (getTotalCartAmount() === 0) {
+      navigate("/cart");
     }
-  },[token])
+  }, [token])
 
   return (
     <form onSubmit={placeOrder} className='place-order'>
